@@ -1,0 +1,9 @@
+.player-item {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}

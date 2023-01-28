@@ -9,15 +9,17 @@ const PlayersList: FC<PlayersListProps> = ({ players, handleFavorite }) => {
   let filteredPlayers = searchPlayers(players, searchText);
 
   return (
-    <div className="players-list">
+    <div className="players-box">
       <SearchBox setSearchText={setSearchText} />
-      {filteredPlayers.map((player: Player) => (
-        <PlayerItem
-          key={player.id}
-          handleFavorite={handleFavorite}
-          player={player}
-        />
-      ))}
+      <div className="players-list">
+        {filteredPlayers.map((player: Player) => (
+          <PlayerItem
+            key={player.id}
+            handleFavorite={handleFavorite}
+            player={player}
+          />
+        ))}
+      </div>
     </div>
   );
 };

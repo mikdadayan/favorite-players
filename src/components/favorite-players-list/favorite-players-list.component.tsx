@@ -4,7 +4,7 @@ import PlayerItem from "../player-item/player-item.component";
 
 const FavoriteList: FC<PlayersListProps> = ({ players, handleFavorite }) => {
   return (
-    <div className="PlayersList">
+    <div className="favorite-list">
       {players.map((player) => (
         <PlayerItem
           key={player.id}
