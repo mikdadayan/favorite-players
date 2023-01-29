@@ -4,6 +4,8 @@ import { searchPlayers } from "../../common/utils/utils";
 import PlayerItem from "../player-item/player-item.component";
 import SearchBox from "../search-box/search-box.component";
 
+import "./players-list.css";
+
 const PlayersList: FC<PlayersListProps> = ({ players, handleFavorite }) => {
   const [searchText, setSearchText] = useState("");
   let filteredPlayers = searchPlayers(players, searchText);

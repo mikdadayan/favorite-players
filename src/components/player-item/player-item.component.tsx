@@ -11,14 +11,16 @@ interface PlayerProps {
 
 const PlayerItem: FC<PlayerProps> = ({ player, handleFavorite }) => {
   return (
-    <div className="player-item">
-      <li>
-        <span>
-          {player.first_name} {player.last_name}
-        </span>
-        <ButtonFavorite handleFavorite={handleFavorite} playerId={player.id} />
-      </li>
-    </div>
+    <li className="player-item">
+      <span>
+        {player.first_name} {player.last_name}
+      </span>
+      <ButtonFavorite
+        handleFavorite={handleFavorite}
+        playerId={player.id}
+        playerStatus={player.favorite}
+      />
+    </li>
   );
 };
 
